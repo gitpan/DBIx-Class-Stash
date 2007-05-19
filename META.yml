@@ -1,0 +1,13 @@
+abstract: stash for DBIC
+author: Atsushi Kobayashi  C<< <atsushi __at__ mobilefactory.jp> >>
+distribution_type: module
+generated_by: Module::Install version 0.64
+license: perl
+name: DBIx-Class-Stash
+no_index: 
+  directory: 
+    - inc
+    - t
+requires: 
+  DBIx::Class: 0
+version: 0.01
