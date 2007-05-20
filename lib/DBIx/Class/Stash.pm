@@ -2,7 +2,7 @@ package DBIx::Class::Stash;
 use strict;
 use warnings;
 use base 'DBIx::Class';
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 __PACKAGE__->mk_classdata('_dbic_stash' => {});
 
@@ -44,7 +44,7 @@ DBIx::Class::Stash - stash for DBIC
     or 
     
     $self->model->stash->{zip1} = $zip1;
-    my $user $self->model('User')->create({ name => 'nekokak' });
+    my $user = $self->model('User')->create({ name => 'nekokak' });
 
 =head1 DESCRIPTION
 
