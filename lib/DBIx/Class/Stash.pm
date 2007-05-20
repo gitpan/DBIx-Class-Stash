@@ -2,7 +2,7 @@ package DBIx::Class::Stash;
 use strict;
 use warnings;
 use base 'DBIx::Class';
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 __PACKAGE__->mk_classdata('_dbic_stash' => {});
 
@@ -11,9 +11,10 @@ sub stash :lvalue {
     $self->{_dbic_stash} ||= __PACKAGE__->_dbic_stash;
 }
 
-{ # set stash method for DBIx::Class::ResultSet
+{ # set stash method for DBIx::Class::ResultSet and DBIx::Class::Schema
     no strict 'refs'; ## no critic
     *{"DBIx\::Class\::ResultSet\::stash"} = \&stash;
+    *{"DBIx\::Class\::Schema\::stash"} = \&stash;
 }
 
 1;
@@ -39,6 +40,11 @@ DBIx::Class::Stash - stash for DBIC
     my $user_rs = $self->model('User')
     $user_rs->stash->{zip1} = $zip1;
     $user_rs->create({ name => 'nekokak' });
+    
+    or 
+    
+    $self->model->stash->{zip1} = $zip1;
+    my $user $self->model('User')->create({ name => 'nekokak' });
 
 =head1 DESCRIPTION
 
