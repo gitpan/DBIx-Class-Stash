@@ -1,5 +1,12 @@
 Revision history for DBIx-Class-Stash
 
-0.0.1  Fri May 18 16:46:53 2007
+0.05
+    2008-11-07
+       FIX: MANIFEST etc...
+0.04
+    2008-11-07
+       FIX: test code.
+0.0.1
+    Fri May 18 16:46:53 2007
        Initial release.
 

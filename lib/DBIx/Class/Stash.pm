@@ -2,7 +2,7 @@ package DBIx::Class::Stash;
 use strict;
 use warnings;
 use base 'DBIx::Class';
-our $VERSION = 0.03;
+our $VERSION = '0.05';
 
 __PACKAGE__->mk_classdata('_dbic_stash' => {});
 
