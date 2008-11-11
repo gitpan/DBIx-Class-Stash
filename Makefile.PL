@@ -7,6 +7,8 @@ all_from 'lib/DBIx/Class/Stash.pm';
 
 requires 'DBIx::Class';
 
+build_requires 'Test::Declare';
+
 use_test_base;
 auto_install;
 WriteAll;
